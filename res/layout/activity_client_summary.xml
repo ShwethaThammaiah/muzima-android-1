@@ -8,7 +8,8 @@
         <TextView
                 android:id="@+id/patientName"
                 android:layout_alignParentLeft="true"
-                style="@style/DashboardMediumTitleText"/>
+                style="@style/DashboardMediumTitleText"
+                android:inputType="textNoSuggestions"/>
 
         <ImageView
                 android:id="@+id/genderImg"

@@ -13,6 +13,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -114,6 +115,7 @@ public class PatientSummaryActivity extends BaseActivity {
     private void setupPatientMetadata() throws PatientController.PatientLoadException {
 
         TextView patientName = (TextView) findViewById(R.id.patientName);
+        patientName.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
         patientName.setText(patient.getFamilyName() + ", " + patient.getGivenName() + " " + patient.getMiddleName());
 
         ImageView genderIcon = (ImageView) findViewById(R.id.genderImg);
